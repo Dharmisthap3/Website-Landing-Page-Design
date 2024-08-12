@@ -25,32 +25,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
         }
-
-        /* Animation for the hero image sliding in */
-@keyframes slide-in-from-side {
-    0% {
-        transform: translateX(100%); /* Start off-screen to the right */
-        opacity: 0;
-    }
-    50% {
-        transform: translateX(-10%); /* Slightly to the left of its final position */
-        opacity: 0.5;
-    }
-    100% {
-        transform: translateX(0); /* Final position */
-        opacity: 1;
-    }
-}
-
-/* Apply the animation to the hero image */
-.hero img {
-    max-width: 60%;
-    height: auto;
-    border-radius: 10px;
-    animation: slide-in-from-side 3s ease-out infinite; /* 3 seconds duration, infinite loop */
-}
-
 
         .logo img {
             max-height: 50px;
@@ -59,6 +35,7 @@
         nav ul {
             list-style: none;
             display: flex;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
         }
 
         nav ul li {
@@ -83,6 +60,7 @@
             padding: 20px;
             background: linear-gradient(to bottom,#BFD7FF,#9BB1FF);
             color: white;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
         }
 
         .hero-text {
@@ -119,7 +97,7 @@
         }
 
         .cta-button:hover {
-            background-color:black;
+            background-color: black;
         }
 
         section {
@@ -162,7 +140,6 @@
         }
 
         .service-item img {
-            /*max-width: 100px;*/
             margin-bottom: 20px;
         }
 
@@ -207,6 +184,11 @@
 
         /* Responsive design */
         @media (max-width: 768px) {
+            .hero {
+                flex-direction: column; /* Stack elements vertically */
+                text-align: center; /* Center text on smaller screens */
+            }
+
             .hero h1 {
                 font-size: 32px;
             }
@@ -239,6 +221,10 @@
             .hero-text {
                 max-width: 100%;
             }
+
+            nav ul li {
+                margin-left: 15px; /* Reduce margin for smaller screens */
+            }
         }
     </style>
 </head>
@@ -260,9 +246,9 @@
         <div class="hero-text">
             <h1>Innovative IT Solutions for Your Business</h1>
             <p>Empowering your digital transformation with cutting-edge technology.</p>
-            <a href="#contact" class="cta-button" style="background-color: #5465FF;">Get in Touch</a>
+            <a href="#contact" class="cta-button">Get in Touch</a>
         </div>
-        <img src="img10.png" alt="Hero Image" height="500px" width="600px"><!-- make this image come from side in a interval of 3 sec-->
+        <img src="img10.png" alt="Hero Image" height="500px" width="600px">
     </section>
 
     <section id="services">
@@ -289,25 +275,25 @@
         </div>
     </section>
 
-    <section id="about" style="background-color:#FFF6CC; margin-bottom: 5px;" >
+    <section id="about" style="background-color:#FFF6CC; margin-bottom: 5px;">
         <div class="section-title">
             <h2>About Us</h2>
-            <p> <b><a href = "https://www.weybee.com/about-us/"><span>Learn more<span></a></b> about our company and our mission.</p>
+            <p><b><a href="https://www.weybee.com/about-us/"><span>Learn more</span></a></b> about our company and our mission.</p>
         </div>
         <center>
-        <p style="color: black;">WeyBee Solutions Pvt. Ltd. is dedicated to simplifying technology for businesses.<br> Our team of experienced developers is committed to delivering superior-quality products that are future-ready.</p>
+            <p style="color: black;">WeyBee Solutions Pvt. Ltd. is dedicated to simplifying technology for businesses.<br> Our team of experienced developers is committed to delivering superior-quality products that are future-ready.</p>
         </center>
     </section>
 
     <section id="contact" style="background-color:#FFF6CC;">
-        <div class="section-title" >
+        <div class="section-title">
             <h2>Contact Us</h2>
             <p>Get in touch with us for more information.</p>
         </div>
         <center>
-        <p>For inquiries, please reach out to us at:</p>
-        <b><p>Email: info@weybee.com</p></b>
-        <b><p>Phone: +91 123 456 7890</p></b>
+            <p>For inquiries, please reach out to us at:</p>
+            <b><p>Email: info@weybee.com</p></b>
+            <b><p>Phone: +91 123 456 7890</p></b>
         </center>
     </section>
 
