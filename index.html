@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeyBee Solutions Pvt. Ltd.</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background: linear-gradient(to bottom,#9BB1FF,#BFD7FF);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Animation for the hero image sliding in */
+@keyframes slide-in-from-side {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(-10%); /* Slightly to the left of its final position */
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0); /* Final position */
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the hero image */
+.hero img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 10px;
+    animation: slide-in-from-side 3s ease-out infinite; /* 3 seconds duration, infinite loop */
+}
+
+
+        .logo img {
+            max-height: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav ul li a:hover {
+            color: black;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 500px;
+            padding: 20px;
+            background: linear-gradient(to bottom,#BFD7FF,#9BB1FF);
+            color: white;
+        }
+
+        .hero-text {
+            max-width: 50%;
+            animation: slide-in 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            color: black; /* Text color */
+        }
+
+        .hero img {
+            max-width: 60%; /* Increased size */
+            height: auto;
+            border-radius: 10px;
+            animation: fade-in 1s ease-out;
+        }
+
+        .cta-button {
+            background-color: #ff5722;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            background-color:black;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 40px;
+        }
+
+        .service-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-item img {
+            /*max-width: 100px;*/
+            margin-bottom: 20px;
+        }
+
+        .service-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Animation for the hero heading */
+        @keyframes slide-in {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .service-item h3 {
+                font-size: 20px;
+            }
+
+            .service-item p {
+                font-size: 14px;
+            }
+
+            .hero img {
+                max-width: 80%; /* Adjusted for smaller screens */
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="https://www.weybee.com/"><img src="logo.png" alt="WeyBee Solutions Pvt. Ltd. Logo" height="50px"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Innovative IT Solutions for Your Business</h1>
+            <p>Empowering your digital transformation with cutting-edge technology.</p>
+            <a href="#contact" class="cta-button" style="background-color: #5465FF;">Get in Touch</a>
+        </div>
+        <img src="img10.png" alt="Hero Image" height="500px" width="600px"><!-- make this image come from side in a interval of 3 sec-->
+    </section>
+
+    <section id="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>We offer a wide range of IT solutions to meet your business needs.</p>
+        </div>
+        <div class="service-grid">
+            <div class="service-item">
+                <img src="2.jpg" width="250px">
+                <h3>Web Development</h3>
+                <p>Corporate websites, e-commerce, and responsive designs tailored for your needs.</p>
+            </div>
+            <div class="service-item">
+                <img src="digital.jpg" alt="Digital Marketing" width="250px" height="140px">
+                <h3>Digital Marketing</h3>
+                <p>Boost your online presence and drive traffic with our expert marketing solutions.</p>
+            </div>
+            <div class="service-item">
+                <img src="3.jpg" alt="Cloud Solutions" height="140px">
+                <h3>Cloud Solutions</h3>
+                <p>Cloud-based services to enhance your business efficiency and scalability.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" style="background-color:#FFF6CC; margin-bottom: 5px;" >
+        <div class="section-title">
+            <h2>About Us</h2>
+            <p> <b><a href = "https://www.weybee.com/about-us/"><span>Learn more<span></a></b> about our company and our mission.</p>
+        </div>
+        <center>
+        <p style="color: black;">WeyBee Solutions Pvt. Ltd. is dedicated to simplifying technology for businesses.<br> Our team of experienced developers is committed to delivering superior-quality products that are future-ready.</p>
+        </center>
+    </section>
+
+    <section id="contact" style="background-color:#FFF6CC;">
+        <div class="section-title" >
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for more information.</p>
+        </div>
+        <center>
+        <p>For inquiries, please reach out to us at:</p>
+        <b><p>Email: info@weybee.com</p></b>
+        <b><p>Phone: +91 123 456 7890</p></b>
+        </center>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 WeyBee Solutions Pvt. Ltd. All rights reserved.</p>
+    </footer>
+</body>
+</html>
